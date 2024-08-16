@@ -8,6 +8,7 @@ import { BiMessageRounded } from "react-icons/bi";
 import { AiOutlineRetweet } from "react-icons/ai";
 import { RiShare2Line } from "react-icons/ri";
 import { FaRegBookmark } from 'react-icons/fa';
+import { MdOutlineCopyright } from "react-icons/md";
 import {format} from 'date-fns'
 
 function RandomJokesTweet() {
@@ -31,7 +32,7 @@ function RandomJokesTweet() {
     },[])
   return (
     <div className='bg-rm-joke h-screen w-screen flex items-center justify-center'>
-        <div className="bg-black border text-slate-500 border-gray-300 rounded-lg shadow-md max-w-lg w-full p-4">
+        <div className="bg-black text-slate-500 border-gray-300 rounded-lg shadow-md max-w-lg w-full p-4">
             <div>
             <GoArrowLeft className='text-2xl m-2 inline-block text-white'/>
             <span className='text-xl text-white font-bold m-4 p-2'>Post</span>
@@ -62,6 +63,9 @@ function RandomJokesTweet() {
             <span className="cursor-pointer"><CiHeart  className="inline-block text-xl" />59k</span>
             <span className="cursor-pointer"><FaRegBookmark  className="inline-block text-xl" />1.1k</span>
             <span className="cursor-pointer"><RiShare2Line className='inline-block' /></span>
+            </div>
+            <div className='flex justify-center items-center mt-1'>
+            <MdOutlineCopyright className='inline-block text-lg mr-1' /> <span className='font-semibold'>Chai aur code</span>
             </div>
         </div>
     </div>
