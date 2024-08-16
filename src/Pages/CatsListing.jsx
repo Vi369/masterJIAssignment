@@ -22,14 +22,13 @@ function CatsListing() {
 
   return (
 
-    <main className='bg-cat  min-w-[100%] min-h-[100%] p-2'>
-        
+    <main className='bg-cat p-2'>
         <header className='mb-5 relative'> 
-            <img src={chaiLogo} alt="logo" className='absolute top-0 right-64' />
+            <img src={chaiLogo} alt="logo" className='absolute top-1 right-64' />
         </header>
         {/* heading */}
         <h1 className='text-4xl text-white ml-10 mt-5'>cats around us</h1>
-        <div className='flex flex-row gap-5 m-12 overflow-auto'>
+        <div className='flex flex-row gap-5 m-12'>
             {catsData?.data.map((data,index)=>{
                 return <CatsCard
                 key={index}
