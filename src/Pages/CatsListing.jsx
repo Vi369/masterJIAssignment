@@ -22,7 +22,7 @@ function CatsListing() {
 
   return (
 
-    <main className='bg-cat p-2'>
+    <main className='bg-cat p-2 h-screen w-screen'>
         <header className='mb-5 relative'> 
             <img src={chaiLogo} alt="logo" className='absolute top-1 right-64' />
         </header>

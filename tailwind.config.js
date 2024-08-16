@@ -8,7 +8,7 @@ export default {
     extend: {
         backgroundImage:{
             'rm-user': "url('')",
-            'rm-joke': "url('')",
+            'rm-joke': "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./assets/jokesTweet/image 4.png')",
             'cat': "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./assets/catsListing/image 7.jpg')"
         }
     },
