@@ -1,5 +1,7 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios';
+import CatsCard from '../Components/CatsCard.jsx';
+import chaiLogo from '../assets/Logo/chaiLogo.png';
 
 function CatsListing() {
     const [catsData, setCatsData] = useState(null);
@@ -17,8 +19,31 @@ function CatsListing() {
     useEffect(()=>{
         getCatsData();
     },[])
+
   return (
-    <div>CatsListing</div>
+
+    <main className='bg-cat  min-w-[100%] min-h-[100%] p-2'>
+        
+        <header className='mb-5 relative'> 
+            <img src={chaiLogo} alt="logo" className='absolute top-0 right-64' />
+        </header>
+        {/* heading */}
+        <h1 className='text-4xl text-white ml-10 mt-5'>cats around us</h1>
+        <div className='flex flex-row gap-5 m-12 overflow-auto'>
+            {catsData?.data.map((data,index)=>{
+                return <CatsCard
+                key={index}
+                imgSrc = {data.image}
+                catName = {data.name}
+                description = {data.description}
+                origin = {data.origin}
+                temperament = {data.temperament}
+                life_span = {data.life_span}
+                knowMore = {data.wikipedia_url}
+                />
+            })}
+        </div>
+    </main>
   )
 }
 
